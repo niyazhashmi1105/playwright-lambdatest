@@ -24,7 +24,7 @@ const capabilities = {
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
-    'build': 'Playwright JS Build 15',
+    'build': 'Playwright JS Build 16',
     'name': 'Playwright Test',
     'user': process.env.LT_USERNAME,
     'accessKey': process.env.LT_ACCESS_KEY,
