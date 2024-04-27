@@ -8,16 +8,26 @@ const { chromium, _android } = require('playwright')
 const cp = require('child_process');
 const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
 
+const buildNumber = generateNumber(14,1)
+console.log('BUILD NO',buildNumber)
+
+async function generateNumber(start, increment){
+  if(increment!=0){
+    start = start+increment;
+  }
+    increment++;
+    return start
+}
 // LambdaTest capabilities
 const capabilities = {
   'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
   'LT:Options': {
     'platform': 'Windows 10',
-    'build': 'Playwright JS Build 13',
+    'build': 'Playwright JS Build 15',
     'name': 'Playwright Test',
-    'user': 'niyaz.hashmi',
-    'accessKey': 'YU29ZEkmBT7faMAWMuNFDzdPBeTU88qwxVM9xAlIIv1RtRv4bu',
+    'user': process.env.LT_USERNAME,
+    'accessKey': process.env.LT_ACCESS_KEY,
     'network': true,
     'video': true,
     'console': true,

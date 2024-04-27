@@ -5,8 +5,8 @@ on:
   pull_request:
     branches: [main]
 env:
-  LT_USERNAME: 'niyaz.hashmi'
-  LT_ACCESS_KEY: 'YU29ZEkmBT7faMAWMuNFDzdPBeTU88qwxVM9xAlIIv1RtRv4bu'
+  LT_USERNAME: ${{ secrets.LT_USERNAME }}
+  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
 
 jobs:
   test:
