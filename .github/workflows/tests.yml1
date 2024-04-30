@@ -94,7 +94,7 @@ jobs:
       - name: Execute Playwright iPhone Emulation Test
         run: npm run test-iPhone-emulation
 
-  playwright-lighthouse:
+  playwright-lighthouse
     runs-on: ubuntu-latest
     strategy:
       matrix:
